@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block info%}
+<main class="main">
+    <div class="main_info">
+        <div class="main_info_text">Обувь разработана специально для городской среды и учитывает аспекты жизни в большом городе.</div>
+    </div>
+</main>
+{% endblock%}
+{% block content%}
+<div class="catalog">
+    {% for garment in shoe %}
+    <div class="catalog_item">
+        <div class="catalog_item_img">
+            <img src={{garment.img}} alt="" class="catalog_item_img_i">
+        </div>
+        <div class="catalog_item_desc">
+            <h3 class="catalog_item_desc_title">{{garment.name}}</h3>
+            <p class="catalog_item_desc_size">Размер: {{garment.size}}</p>
+            <p class="catalog_item_desc_price">Цена: {{garment.price}} p</p>
+
+        </div>
+    
+    </div>
+    {%endfor%}
+</div>
+
+{% endblock %}

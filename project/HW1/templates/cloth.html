@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block info %}
+<main class="main">
+    <div class="main_info">
+        <div class="main_info_text">Одежда представлена в спокойных тонах. Такая одежда прекрасно впишется в городскую среду.</div>
+    </div>
+</main>
+{% endblock %}
+{% block content %}
+<div class="catalog">
+    {% for garment in garments %}
+    <div class="catalog_item">
+        <div class="catalog_item_img">
+            <img src={{garment.img}} alt="" class="catalog_item_img_i">
+        </div>
+        <div class="catalog_item_desc">
+            <h3 class="catalog_item_desc_title text">{{garment.name}}</h3>
+            <p class="catalog_item_desc_size text">Размер: {{garment.size}}</p>
+            <p class="catalog_item_desc_price text"> Цена: {{garment.price}} р</p>
+
+        </div>
+    
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
