@@ -6,8 +6,7 @@ app.secret_key ='5f214cacbd30c2ae4784b520f17912ae0d5d8c16ae98128e3f549546221269e
 def index():
     if 'username' in session:
         return redirect(url_for('hello'))
-        #return render_template('hello.html', name=session['username'])
-       # return f"Привет, {session['username']}"
+        
     else:
         return redirect(url_for('login'))
 
@@ -15,6 +14,7 @@ def index():
 def login():
     if request.method == 'POST':
         session['username'] = request.form.get('username') or 'NoName'
+        session['e-mail'] = request.form.get('e-mail')
         return redirect(url_for('index'))
     return render_template('form.html')
 
