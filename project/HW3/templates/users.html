@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block info %}
+<h1 class="title1 title1_text">Users</h1>
+<div class="form">
+    {% for user in users %}
+    <p class="form_text gap">Имя пользователя: {{
+    user.firstname }}<br>
+    Фамилия пользователя: {{ user.lastname }}</p>
+    {% endfor %}
+    </div>
+    
+
+{% endblock %}

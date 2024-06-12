@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <script src="https://kit.fontawesome.com/f1f16614cc.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="nav">
+            <a href="/" class="nav_item">Главная</a>
+            <a href="/register/" class="nav_item">Регистрация</a>
+            <a href="/users/" class="nav_item">Пользователи</a>
+
+        </div>
+        <div class="title">
+            <h1 class="title_text">Free Spirit</h1>
+        </div>
+    </header>
+    {% block info%}
+    <main class="main">
+        <div class="main_info">
+            <div class="main_info_text">магазин специализируется на продаже одежды и обуви, вдохновленной природой и натуральными материалами.</div>
+        </div>
+    </main>
+    {% endblock%}
+    
+    
+    <footer class="footer">
+        <div>
+            <div class="footer__navbar">
+                <p>© 2022 Brand All Rights Reserved.</p>
+                <div class="footer__navbar__icons">
+    
+                    <a href="#" class="fa fa-pinterest-p "></a>
+                    <a href="#" class="fa fa-twitter "></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
